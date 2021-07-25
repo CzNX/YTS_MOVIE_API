@@ -1,0 +1,10 @@
+/* trending */
+.trending {
+  text-align: center;
+}
+
+.trending_contents {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
