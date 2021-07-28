@@ -1,3 +1,5 @@
+@import "react-alice-carousel/lib/alice-carousel.css";
+
 * {
   margin: 0;
   padding: 0;
@@ -6,11 +8,9 @@
 
 html,
 body {
-  /* background: #373535; */
   color: #000;
   scroll-behavior: smooth;
   background: url(/src/assets/vb5.png) repeat;
-  /* background: #000; */
 }
 
 a {
@@ -31,13 +31,9 @@ ul {
   position: static;
   max-width: 70%;
   margin: auto;
-  padding-bottom: 80px;
-  padding-top: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  /* padding: 40px 60px 100px 60px; */
 }
 
 @media (max-width: 1024px) {

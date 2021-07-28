@@ -1,6 +1,6 @@
 import { Badge } from "@material-ui/core";
 import { unavailable } from "../config/Config";
-// import "./comps_styles.css";
+import TransitionsModal from "./Modal";
 
 const SingleContent = ({
   medium_cover_image,
@@ -9,22 +9,8 @@ const SingleContent = ({
   rating,
   genres,
   runtime,
-  contentnew,
+  id,
 }) => {
-  // const [selectedGenre, setSelectedGenre] = useState([]);
-
-  // const fetchGenres = async () => {
-  //   const { data } = await axios.get(
-  //     ` https://api.themoviedb.org/3/genre/${media_type}/list?api_key=${process.env.REACT_APP_API}&language=en-US`
-  //   );
-
-  //   setSelectedGenre(data.genres.filter((p) => genre_ids.includes(p.id)));
-  // };
-
-  // useEffect(() => {
-  //   fetchGenres();
-  // }, []);
-
   const runtimeHandler = (r) => {
     if (r === 0) {
       return "unknown";
@@ -38,12 +24,7 @@ const SingleContent = ({
   };
 
   return (
-    // <div
-    //   className={`${
-    //     contentnew.length === 1 ? "singleContent single" : "singleContent"
-    //   }`}
-    // >
-    <div className="singleContent">
+    <TransitionsModal id={id} runtimeHandler={runtimeHandler}>
       <Badge
         badgeContent={`${rating === 0 ? "unrated" : rating}`}
         color={`${rating > 7.5 ? "secondary" : "primary"}`}
@@ -81,11 +62,11 @@ const SingleContent = ({
         </span>
         <span className="rate">Rating: {rating}/10</span>
         <span className="runtime">Running Time: {runtimeHandler(runtime)}</span>
-        <button type="button" className="view_btn">
+        <span type="button" className="view_btn">
           View Detail
-        </button>
+        </span>
       </div>
-    </div>
+    </TransitionsModal>
   );
 };
 
