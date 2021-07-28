@@ -151,7 +151,7 @@ export default function TransitionsModal({ children, id }) {
                     {`${
                       modalContent.description_intro
                         ? modalContent.description_intro
-                        : "Not Available"
+                        : "Description Not Available..."
                     }`}
                   </span>
                   <div className="cast_section">

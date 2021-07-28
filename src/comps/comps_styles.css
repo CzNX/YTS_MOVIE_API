@@ -154,6 +154,7 @@
 .ContentModal_desc {
   min-height: 35% !important;
   max-width: 90%;
+  min-width: 50%;
   margin: auto;
   font-weight: lighter !important;
   display: flex;
